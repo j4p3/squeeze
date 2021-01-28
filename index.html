@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <!-- Stop looking for something clever in here, this is literally straight html
+  
+  putting an API behind it at some point so I can stop editing it, but right now I'm setting up the alerting
+
+  jp.bonner@bonner.jp if you want to help-->
+
+  <meta charset="utf-8">
+  <title>is the squeeze squoze yet?</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="is the squeeze squoze yet?">
+  <meta name="description" content="no">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://isthesqueezesquoze.casino/">
+  <meta property="og:title" content="is the squeeze squoze yet?">
+  <meta property="og:description" content="no">
+  <meta property="og:image" content="/thumb.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://isthesqueezesquoze.casino/">
+  <meta property="twitter:title" content="is the squeeze squoze yet?">
+  <meta property="twitter:description" content="no">
+  <meta property="twitter:image" content="/thumb.png">
+
+
+  <link rel="apple-touch-icon" href="/thumb.png">
+
+  <meta name="theme-color" content="#1c1c1c">
+  <style>
+    body {
+      font-family: 'Helvetica', Arial, sans-serif;
+      color: #1c1c1c;
+      line-height: 1.4em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    main {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 4em;
+      line-height: initial;
+
+      @media (min-width: 800px) {
+        font-size: 6em;
+      }
+    }
+
+    h2 {
+      font-size: 2em;
+      line-height: initial;
+
+      @media (min-width: 800px) {
+        font-size: 4em;
+      }
+    }
+
+    article {
+      max-width: 480px;
+      padding: 1em;
+
+      @media (min-width: 800px) {
+        padding: 0;
+      }
+    }
+
+    .var {
+      background-color: lightgray;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HLD7RFSLFN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HLD7RFSLFN');
+  </script>
+</head>
+
+<body>
+  <main>
+    <h2>as of <span id="date"></span>,</h2>
+    <h1>the squeeze has <u>not</u> been squoze.</h1>
+  </main>
+  <article>
+    <p>GME shorts have not begun to close their positions in substantial numbers.</p>
+    <h3>the situation (1/27):</h3>
+    <p>
+    <ul>
+      <li><b>short interest:</b> <span id="short_interest"></span></li>
+      <li><b>short share availability:</b> <span id="short_availability"></span></li>
+    </ul>
+    </p>
+    <button id="subscribe">click here to be sent a heads up when the squeeze is probably starting to get squoze</button>
+  </article>
+  <article id="mc_embed_signup" class="hidden">
+    <form action="https://bonner.us7.list-manage.com/subscribe/post?u=ed1bdca530f1a8ad3a0f57d09&amp;id=7bfcf862c8"
+      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+      novalidate>
+      <b>k i'm building that, gimme ur info and I'll do my best to keep you up to date</b>
+      <p>
+        <label for="mce-EMAIL">email 4 email alert</label>
+        <input type="email" value="" name="EMAIL" id="mce-EMAIL">
+      </p>
+      <p class="mc-field-group size1of2">
+        <label for="mce-PHONE">phone 4 text alert</label>
+        <input type="text" name="PHONE" value="" id="mce-PHONE">
+      </p>
+      <div id="mce-responses"">
+            <div id=" mce-error-response" style="display:none"></div>
+      <div id="mce-success-response" style="display:none"></div>
+      </div>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+          name="b_ed1bdca530f1a8ad3a0f57d09_7bfcf862c8" tabindex="-1" value=""></div>
+      <p><input type="submit" value="Subscribe for updates" name="subscribe" id="mc-embedded-subscribe"></p>
+    </form>
+  </article>
+  <article>
+    <h3>wat</h3>
+    <p>
+      OK, listen up, you late-to-the-party, crayon-eating homunculus, here's what's going on:
+    </p>
+    <p>
+      Over the past year, hedge fund supervillains have made money by selling shares of Gamestop they don't actually own
+      - they've just borrowed them. Short selling. If they sell enough they can drive the price down so far that when
+      they eventually need to return the shares they borrowed, they can get them cheap. It's free money. They throw a
+      couple hundred mil at this, chill in their offices watching live video feeds of homeless people being
+      exsanguinated on the hoods of their vintage sports cars, write up an investor report, and call it a fiscal year.
+    </p>
+    <p>
+      They borrowed and sold a record amount - they sold more shares, in fact, than are actually traded, far more than
+      Gamestop's float. This shouldn't have been allowed to happen and probably means they were selling
+      shares they never even bothered to borrow - naked shorts. (Where were you on that one, SEC?) Essentially, they
+      were simultaneously betting on Gamestop going bankrupt and doing their best to drive them into bankruptcy. It's a
+      good tactic when you need to find a way to pay for your old wife's alimony and your new wife's poolboy.
+    </p>
+    <p>
+      But it presents an opportunity for the savvy degenerate gambler. Because these shares eventually need to be
+      returned - for one thing, they can only be borrowed for a certain number of days, and for another, it costs these
+      funds money to borrow a share. This means that at some point, they need to buy back those borrowed shares they
+      sold.
+    </p>
+    <p>
+      All 140% of them.
+    </p>
+    <p>
+      So our visionary gambler, if they were to invest in Gamestop, would have a guaranteed buyer for their shares. And
+      if millions of fellow degenerates were to ask their mother for an advance on their allowance so that they could
+      buy Gamestop, too -
+    </p>
+    <p>
+      And then, if a famous e-commerce CEO were to buy a ton of Gamestop shares, join the board, and announce they're
+      going to be a big company again by doing internet things and esports and radical new stuff -
+    </p>
+    <p>
+      And then, if a truly insane amount of call option buying - don't worry about it if you don't know - were to force
+      market makers to rapidly buy up a ton of shares to fulfill all those options they sold in a wild phenomenon that's
+      basically the stock equivalent of an atmospheric microburst, called a gamma squeeze, suddenly spiking Gamestop's
+      price to unheard-of levels -
+    </p>
+    <p>
+      - hang on, I need a new pair of pants -
+    </p>
+    <p>
+      Well then you'd have the perfect conditions for a short squeeze. The price is insanely high. There's a whole
+      street of funds with deep pockets who absolutely must find a way to buy all those insanely expensive shares. And
+      by buying them - 140% of the amount traded! - they're going to drive up the price even more. So one day, a large
+      enough block of borrowed shares will expire that a fund will have to drive GME's price through the roof in buying
+      them back. And as the price climbs, other short holders are going to be required to cover their borrowed shares by
+      buying them. It's a runaway reaction where the more it happens, the more it happens. You know, one of those cute
+      little phenomena like virus spread. Or nuclear bombs.
+    </p>
+    <p>
+      So who are they buying from? That's right. At what price are they buying? Well, that depends.
+    </p>
+    <p>
+      Hedge fund managers holding GME shorts would really, really like to convince GME stock holders to sell them some
+      shares right now, before it climbs any higher, so that they can return the shares they borrowed and get out before
+      they get steamrolled into bankrupcy. And they've got lots of tools at their disposal to do this: they can pump up
+      other stocks to create FOMO, causing GME holders to sell their shares to go chase some shiny new meme. They can
+      hire PR companies to astroturf these stocks on Elon Musk fan clubs and gambling forums. They can buy up shares and
+      then, after trading hours are over, sell them in progressively cheaper tranches to drive down the stock price.
+      They can wipe the hobo blood off their wattle and go cry on television about how they're being bullied. They have,
+      in fact, tried all of these things. But it hasn't worked - GME's price is higher than ever. It's out of control,
+      now - there are too many people involved. The meme has reached critical mass.
+    </p>
+    <p>
+      Now it's a classic million-player prisoner's dilemma: every GME holder has visions of selling their shares for
+      unlimited chicken tendies and cocaine dipping sauce. Maybe they think they alone can sell, while everyone else can
+      continue to drive the price up by holding. But if every degenerate gambler thought this way, and sold their
+      shares, very quickly the short squeeze wouldn't happen. Short holders would buy up all the shares being sold at a
+      painful but manageable loss, they would cover their position, and the nuke would never be detonated.
+    </p>
+    <p>
+      What's a prisoner in this dilemma to do? At last, the point arrives. To avoid selling too early, the savvy
+      degenerate gambler would wait until short interest - the amount of shares shorted out there - started to decline
+      substantially. As long as nobody was defecting, nobody selling early, that decline in shares shorted would come
+      with a spike in the price of the stock, as the few shares available are bought at astronomical prices. And this
+      decline in shares shorted would distinguish this spike from gamma squeezes or regular old stock run-ups.
+    </p>
+    <p>
+      Then and only then, as the nuke goes off, the stock price ascends past Alpha Centauri, and the short interest
+      finally starts declining, the short squeeze has begun. And then it's every gambler for themself.
+    </p>
+  </article>
+  <article>
+    <h3>resources:</h3>
+    <p>
+      do your own research you apes, don't rely on me
+    <ul>
+      <li><a target="_blank" href="https://screener.shortsight.com/">
+          s3 shortsight (subscription)
+        </a></li>
+      <li><a target="_blank" href="https://www.ortex.com/symbol/nyse/gme/short_interest">
+          ortex short interest (trial + subscription)
+        </a></li>
+      <li><a target="_blank" href="https://fintel.io/ss/us/gme">
+          fintel short shares availability
+        </a></li>
+    </ul>
+    </p>
+  </article>
+  <article>
+    <h3>points of interest:</h3>
+    <p>
+      if you don't know this you shouldn't be gambling, but
+    <ul>
+      <li>
+        your broker is lending your shares out to people who want them, like the hedge funds you're betting against.
+        depending who your broker is you can call them and tell them to stop, turn off margin trading, set limit sells
+        at stratospherically high prices, or go get a real broker.
+      </li>
+      <li>
+        your broker is selling your information, like your sell price, to anybody who can pay for it. if you set a
+        stop-loss sell at 100, and some other gambler set a stop-loss sell at 115, then a hedge fund wanting to drive
+        the price down can start to chain-trigger stop-loss sells until the prices reaches a level low enough to allow
+        them to escape the short squeeze.
+      </li>
+    </ul>
+    </p>
+  </article>
+  <article>
+    <p><a target="_blank" href="https://bonner.jp">
+        by jp
+      </a></p>
+    <p><a target="_blank" href="https://twitter.com/inflammateomnia">
+        @inflammateomnia
+      </a></p>
+    <p>
+      I am not a financial advisor and none of this is financial advice
+    </p>
+    <p>
+      do your own research and come to your own conclusions
+    </p>
+  </article>
+</body>
+
+<script>
+  const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const SHORT_DATA = [{
+    source: 'Ortex',
+    estimate: 65.75,
+  },
+  {
+    source: 'S3 Shortsight',
+    estimate: 71.88
+  }];
+  const FLOAT = 51.44
+  const SHORT_AVAILABILITY = '200,000'
+  const date = new Date();
+
+  const timestampString = `${MONTHS[date.getMonth()]} ${date.getDate()}`;
+  const shortPercents = SHORT_DATA.map((s) => `${((s.estimate / FLOAT) * 100).toFixed(2)}% of float by ${s.source}`).join(', ');
+
+  document.querySelector("#date").textContent = timestampString;
+  document.querySelector("#short_interest").textContent = shortPercents;
+  document.querySelector("#short_availability").textContent = SHORT_AVAILABILITY;
+
+  document.getElementById('subscribe').addEventListener('click', (_) => {
+    document.getElementById('mc_embed_signup').classList.remove('hidden')
+  });
+</script>
+
+</html>
