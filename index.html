@@ -77,8 +77,9 @@
       }
     }
 
-    .var {
-      background-color: lightgray;
+    button {
+      -webkit-appearance: none;
+      height: 100%;
     }
 
     .hidden {
@@ -102,22 +103,53 @@
     <h1>the squeeze has <u>not</u> been squoze.</h1>
   </main>
   <article>
-    <p>GME shorts have not begun to close their positions in substantial numbers.</p>
-    <h3>the situation (1/28 5 PM ET):</h3>
-    <p>
+    <h3>Public Service Announcement</h3>
+    <p><i>
+        This is not a game. The people who originated this meme like to have fun with stupid stock bets, we like to
+        pretend we're monkeys throwing darts, but though we enjoy talking like idiots, we actually do know the
+        difference between delta and theta. We understand what role a clearinghouse performs. We were playing GME weeks
+        ago, at $10-$50, as it became clear that DFV was actually right. We put in money we could afford to lose,
+        because we knew we were speculating on a potential short squeeze.
+      </i></p>
+    <p><i>
+        If these statements don't describe you - if you don't know options greeks, if you don't understand how the
+        market works, and especially if you are gambling with money that would cause you problems if you didn't have it
+        anymore - then pull your head out of your ass, return to the real world with your real obligations and expenses,
+        and don't increase your exposure any more. There's an emotional high in gambling, especially when you're doing
+        it with lots of other euphoric people. Don't let it screw up your life.
+      </i></p>
+    <p><i>
+        This is not an epic crusade to get retribution on the financial sector for its reckless greed and the damage
+        it's done to people's lives. It's just a stock play, undertaken to make money off of some hedge funds who got
+        caught in an overexposed position. The financial industry as a whole does not care. This is just a blip on its
+        radar.
+      </i></p>
+    <p><i>Anyway, here's the update.</i></p>
+    <h3>the situation (1/31 8 PM ET):</h3>
     <ul>
-      <li><b>short interest:</b> <span id="short_interest"></span></li>
-      <li><b>change in short share availability:</b> <span id="short_availability"></span></li>
-      <li>robinhood and other brokerages relying on Citadel stopped accepting buy orders on stocks which Citadel wants to allow its hedge funds to unwind from. Robinhood is apparently going so far as to liquidate GME shares in accounts that are not using margin trading(!) If you're still on robinhood, you should find a new broker ASAP. Retail brokers who didn't stab their clients in the back include:
-        <ul>
-          <li>vanguard</li>
-          <li>td ameritrade</li>
-          <li>fidelity</li>
-        </ul>
+      <li><b>short interest:</b>
+        <p id="short_interest"></p>
+      </li>
+      <li><b>short share public availability:</b>
+        <p id="short_availability"></p>
+      </li>
+      <li><b>short share public borrow rate:</b>
+        <p id="borrow_rate"></p>
+      </li>
+      <li>
+        Shorts appear to be exiting their positions. There's a lot of speculation about how this is happening, or
+        whether it is truly happening at all - there are tactics that can be used to "counterfeit" stock or manipulate
+        disclosed short short interest - but the short interest numbers we've been following all along are definitely
+        trending down.
+      </li>
+      <li>
+        how often is this site updated? As often as the data is updated. Typically this is daily, before market open.
       </li>
     </ul>
+    <p>
+      <button id="subscribe">click here to be sent a heads up when the squeeze is probably starting to get
+        squoze</button>
     </p>
-    <button id="subscribe">click here to be sent a heads up when the squeeze is probably starting to get squoze</button>
   </article>
   <article id="mc_embed_signup" class="hidden">
     <form action="https://bonner.us7.list-manage.com/subscribe/post?u=ed1bdca530f1a8ad3a0f57d09&amp;id=7bfcf862c8"
@@ -261,39 +293,6 @@
     </p>
   </article>
   <article>
-    <h3>points of interest:</h3>
-    <p>
-      if you don't know this you shouldn't be gambling, but
-    <ul>
-      <li>
-        robinhood didn't halt trading just because they hate you, they did it because Citadel made them. Robinhood can't
-        actually place your order themselves, they need to go to a market maker to find a counterparty for you. Citadel
-        actually pays robinhood for this, because your trades are free money for them - they overcharge you on the
-        spread, and they place their own trades immediately before yours to take advantage of price movement. They're
-        the ones who want you to lose money: they bailed out the biggest hedge fund shorting Gamestop, Melvin, so now
-        they own a huge chunk of that fund. So now that they want the shorts to win, and the retail traders (you) to
-        lose, they told robinhood to get lost, they just wouldn't be accepting buy orders on these stocks. Just sells.
-        (This has never happened before.) Only then did Robinhood turn around and stab its retail traders in the back -
-        because, of course, you're not their customer. Citadel is their customer. You're their product.
-      </li>
-      <li>
-        ok, this one's new to me: robinhood is apparently selling shares belonging to accounts that are not trading on margin. Margin calls are normal. Selling shares that your clients own outright is crazytown what-in-the-world shenanigans.
-      </li>
-      <li>
-        your broker is lending your shares out to people who want them, like the hedge funds you're betting against.
-        depending who your broker is you can call them and tell them to stop, turn off margin trading, set limit sells
-        at stratospherically high prices, or go get a real broker.
-      </li>
-      <li>
-        your broker is selling your information, like your sell price, to anybody who can pay for it. if you set a
-        stop-loss sell at 100, and some other gambler set a stop-loss sell at 115, then a hedge fund wanting to drive
-        the price down can start to chain-trigger stop-loss sells until the prices reaches a level low enough to allow
-        them to escape the short squeeze.
-      </li>
-    </ul>
-    </p>
-  </article>
-  <article>
     <p><a target="_blank" href="https://bonner.jp">
         by jp
       </a></p>
@@ -312,22 +311,31 @@
 <script>
   const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   const SHORT_DATA = [{
-    source: 'Ortex',
-    estimate: 100.00,
+    source: 'S3 Shortsight preliminary weekend data (1/31)',
+    estimate: 30.0,
+    percent: 58
   },
   {
-    source: 'S3 Shortsight',
-    estimate: 123.25,
+    source: 'S3 Shortsight (1/29)',
+    estimate: 57.83,
+    percent: 113.31
+  },
+  {
+    source: 'Ortex (1/28)',
+    estimate: 38.6,
+    percent: 65.64,
   }];
-  const SHORT_AVAILABILITY = '+9,000'
+  const SHORT_AVAILABILITY = '0 (Interactive Brokers)'
+  const BORROW_RATE = '18.88 (Interactive Brokers)'
   const date = new Date();
 
   const timestampString = `${MONTHS[date.getMonth()]} ${date.getDate()}`;
-  const shortPercents = SHORT_DATA.map((s) => `${s.estimate}% of float by ${s.source}`).join(', ');
+  const shortPercents = SHORT_DATA.map((s) => `${s.estimate}m (${s.percent}% of float) by ${s.source}`).join(', ');
 
   document.querySelector("#date").textContent = timestampString;
   document.querySelector("#short_interest").textContent = shortPercents;
   document.querySelector("#short_availability").textContent = SHORT_AVAILABILITY;
+  document.querySelector("#borrow_rate").textContent = BORROW_RATE;
 
   document.getElementById('subscribe').addEventListener('click', (_) => {
     document.getElementById('mc_embed_signup').classList.remove('hidden')
