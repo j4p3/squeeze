@@ -103,29 +103,7 @@
     <h1>the squeeze has <u>not</u> been squoze.</h1>
   </main>
   <article>
-    <h3>Public Service Announcement</h3>
-    <p><i>
-        This is not a game. The people who originated this meme like to have fun with stupid stock bets, we like to
-        pretend we're monkeys throwing darts, but though we enjoy talking like idiots, we actually do know the
-        difference between delta and theta. We understand what role a clearinghouse performs. We were playing GME weeks
-        ago, at $10-$50, as it became clear that DFV was actually right. We put in money we could afford to lose,
-        because we knew we were speculating on a potential short squeeze.
-      </i></p>
-    <p><i>
-        If these statements don't describe you - if you don't know options greeks, if you don't understand how the
-        market works, and especially if you are gambling with money that would cause you problems if you didn't have it
-        anymore - then pull your head out of your ass, return to the real world with your real obligations and expenses,
-        and don't increase your exposure any more. There's an emotional high in gambling, especially when you're doing
-        it with lots of other euphoric people. Don't let it screw up your life.
-      </i></p>
-    <p><i>
-        This is not an epic crusade to get retribution on the financial sector for its reckless greed and the damage
-        it's done to people's lives. It's just a stock play, undertaken to make money off of some hedge funds who got
-        caught in an overexposed position. The financial industry as a whole does not care. This is just a blip on its
-        radar.
-      </i></p>
-    <p><i>Anyway, here's the update.</i></p>
-    <h3>the situation (1/31 8 PM ET):</h3>
+    <h3>the situation (2/2 11 AM ET):</h3>
     <ul>
       <li><b>short interest:</b>
         <p id="short_interest"></p>
@@ -138,12 +116,16 @@
       </li>
       <li>
         Shorts appear to be exiting their positions. There's a lot of speculation about how this is happening, or
-        whether it is truly happening at all - there are tactics that can be used to "counterfeit" stock or manipulate
-        disclosed short short interest - but the short interest numbers we've been following all along are definitely
-        trending down.
+        whether it is truly happening at all - there are tactics that can be used manipulate disclosed short short
+        interest - but the short interest numbers we've been following all along are definitely trending down.
       </li>
       <li>
         how often is this site updated? As often as the data is updated. Typically this is daily, before market open.
+      </li>
+      <li>
+        is the squeeze ever going to be squoze? possibly. short interest is still high, but it'll take some sort of catalyst:
+        without one, at this point it's more likely short repurchasing continues as a gradual upward pressure, rather than a
+        sudden mass event that causes the price to explode.
       </li>
     </ul>
     <p>
@@ -172,6 +154,29 @@
           name="b_ed1bdca530f1a8ad3a0f57d09_7bfcf862c8" tabindex="-1" value=""></div>
       <p><input type="submit" value="Subscribe for updates" name="subscribe" id="mc-embedded-subscribe"></p>
     </form>
+  </article>
+  <article>
+    <h3>Public Service Announcement</h3>
+    <p><i>
+        This is not a game. The people who originated this meme like to have fun with stupid stock bets, we like to
+        pretend we're monkeys throwing darts, but though we enjoy talking like idiots, we actually do know the
+        difference between delta and theta. We understand what role a clearinghouse performs. We were playing GME weeks
+        ago, at $10-$50, as it became clear that DFV was actually right. We put in money we could afford to lose,
+        because we knew we were speculating on a potential short squeeze.
+      </i></p>
+    <p><i>
+        If these statements don't describe you - if you don't know options greeks, if you don't understand how the
+        market works, and especially if you are gambling with money that would cause you problems if you didn't have it
+        anymore - then pull your head out of your ass, return to the real world with your real obligations and expenses,
+        and don't increase your exposure any more. There's an emotional high in gambling, especially when you're doing
+        it with lots of other euphoric people. Don't let it screw up your life.
+      </i></p>
+    <p><i>
+        This is not an epic crusade to get retribution on the financial sector for its reckless greed and the damage
+        it's done to people's lives. It's just a stock play, undertaken to make money off of some hedge funds who got
+        caught in an overexposed position. The financial industry as a whole does not care. This is just a blip on its
+        radar.
+      </i></p>
   </article>
   <article>
     <h3>wat</h3>
@@ -311,22 +316,17 @@
 <script>
   const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   const SHORT_DATA = [{
-    source: 'S3 Shortsight preliminary weekend data (1/31)',
-    estimate: 30.0,
-    percent: 58
+    source: 'S3 Shortsight (2/1)',
+    estimate: 26.09,
+    percent: 51.13
   },
   {
-    source: 'S3 Shortsight (1/29)',
-    estimate: 57.83,
-    percent: 113.31
-  },
-  {
-    source: 'Ortex (1/28)',
-    estimate: 38.6,
-    percent: 65.64,
+    source: 'Ortex (2/1)',
+    estimate: 27.04,
+    percent: 52.88,
   }];
   const SHORT_AVAILABILITY = '0 (Interactive Brokers)'
-  const BORROW_RATE = '18.88 (Interactive Brokers)'
+  const BORROW_RATE = '16.97% (Interactive Brokers)'
   const date = new Date();
 
   const timestampString = `${MONTHS[date.getMonth()]} ${date.getDate()}`;
